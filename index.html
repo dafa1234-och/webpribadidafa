@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Madrid CF</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f8f8f8;
+      color: #222;
+      transition: all 0.3s ease;
+    }
+    header {
+      background-color: white;
+      border-bottom: 3px solid #00529F;
+      text-align: center;
+      padding: 25px;
+    }
+    nav {
+      background-color: #00529F;
+      text-align: center;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 14px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    nav button:hover {
+      background-color: #003d73;
+    }
+    section {
+      display: none;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    section.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    footer {
+      background-color: #00529F;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>REAL MADRID CF</h1>
+    <p>Klub Sepak Bola Terbesar di Dunia</p>
+  </header>
+
+  <nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('sejarah')">Sejarah</button>
+    <button onclick="showPage('pemain')">Pemain</button>
+    <button onclick="showPage('prestasi')">Prestasi</button>
+    <button onclick="showPage('galeri')">Galeri</button>
+  </nav>
+
+  <!-- Halaman Home -->
+  <section id="home" class="active">
+    <h2>Selamat Datang di Situs Real Madrid</h2>
+    <p>
+      Real Madrid Club de Fútbol adalah klub sepak bola profesional asal Madrid, Spanyol.
+      Didirikan pada tahun 1902, klub ini dikenal sebagai salah satu yang paling sukses di dunia.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" width="200" alt="Logo Real Madrid">
+  </section>
+
+  <!-- Halaman Sejarah -->
+  <section id="sejarah">
+    <h2>Sejarah Real Madrid</h2>
+    <p>
+      Real Madrid didirikan pada tahun 1902 oleh sekelompok penggemar sepak bola di Madrid.
+      Klub ini menjadi simbol kebanggaan Spanyol dan dikenal dengan warna putih khasnya.
+      Sejak awal berdirinya, Real Madrid sudah memenangkan banyak gelar domestik dan internasional.
+    </p>
+  </section>
+
+  <!-- Halaman Pemain -->
+  <section id="pemain">
+    <h2>Daftar Pemain Real Madrid</h2>
+    <ul style="list-style:none; padding:0;">
+      <li>Thibaut Courtois – Kiper</li>
+      <li>Dani Carvajal – Bek Kanan</li>
+      <li>Éder Militão – Bek</li>
+      <li>Dean Huijsen – Bek</li>
+      <li>Alvaro Careras – Bek Kiri</li>
+      <li>Aurélien Tchouaméni – Gelandang</li>
+      <li>Jude Bellingham – Gelandang</li>
+      <li>Arda Guler - Gelandang</li>
+      <li>Vinícius Jr. – Penyerang</li>
+      <li>Rodrygo Goes – Penyerang</li>
+      <li>Kylian Mbappe – Penyerang</li>
+    </ul>
+  </section>
+
+  <!-- Halaman Prestasi -->
+  <section id="prestasi">
+    <h2>Prestasi Real Madrid</h2>
+    <ul style="list-style:none; padding:0;">
+      <li>🏆 15x Juara Liga Champions UEFA</li>
+      <li>🏆 35x Juara La Liga Spanyol</li>
+      <li>🏆 20x Copa del Rey</li>
+      <li>🏆 5x Piala Dunia Antarklub FIFA</li>
+      <li>🏆 La Liga 36x</li>
+      <li>🏆 Supercopa de España: 13x</li>
+      <li>🏆 FIFA Club World Cup: 9x </li>
+      <li>🏆 Super Ballon d'Or</li>
+      <li>🏆 Klub dengan trofi UCL terbanyak: 15x</li>
+    </ul>
+  </section>
+
+  <!-- Halaman Galeri -->
+  <section id="galeri">
+    <h2>Galeri Real Madrid</h2>
+    <div class="gallery">
+      <img src="bernabeu.jpg" alt="Stadion Bernabeu">
+      <img src="juara.jpg" alt="Perayaan Juara">
+      <img src="tim.jpg" alt="Tim Real Madrid">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Real Madrid Fan Page | Dibuat Oleh Dafa</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('section');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
